@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="NeedIt Properties" max_length="40" name="x_58872_needit_needit_properties" type="collection">
+        <element label="Domain" max_length="32" name="sys_domain" type="domain_id"/>
+        <element label="Domain Path" max_length="255" name="sys_domain_path" type="domain_path"/>
+        <element label="Overrides" max_length="32" name="sys_overrides" reference="x_58872_needit_needit_properties" type="reference"/>
+        <element choice="1" label="Advanced notice days" max_length="40" name="u_integer_1" type="integer">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="21" sequence="0" value="21"/>
+                <element inactive_on_update="false" label="4" sequence="0" value="2"/>
+                <element inactive_on_update="false" label="4" sequence="0" value="2"/>
+                <element inactive_on_update="false" label="14" sequence="1" value="14"/>
+                <element inactive_on_update="false" label="21" sequence="1" value="21"/>
+            </choice>
+        </element>
+        <element choice="1" label="Auto-closed overdue" max_length="40" name="u_integer_2" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="2" sequence="0" value="2"/>
+                <element inactive_on_update="false" label="14" sequence="1" value="14"/>
+                <element inactive_on_update="false" label="21" sequence="2" value="21"/>
+                <element inactive_on_update="false" label="28" sequence="3" value="28"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="sys_domain"/>
+        </index>
+        <index name="index2">
+            <element name="sys_overrides"/>
+        </index>
+        <index name="index3">
+            <element name="sys_domain_path"/>
+        </index>
+    </element>
+</database>
